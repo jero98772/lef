@@ -1,0 +1,7 @@
+* instalaciones
+** spacemacs
+*** https://awesomeopensource.com/project/syl20bnr/spacemacs?categorypage=21#install
+* ledger
+** https://www.ledger-cli.org/3.0/doc/ledger-mode.pdf
+* emacs
+* varios

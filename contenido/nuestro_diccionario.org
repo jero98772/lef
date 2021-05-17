@@ -1,0 +1,6 @@
+* nuestro diccionario
+*** traduccion y siginificado de algunas palabras de humano a usuario de emacs y ledger
+** traducciones
+*** de usuario de emacs y legder a humano 
+*** log -> reporte con varios datos 
+** significados

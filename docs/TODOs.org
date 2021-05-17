@@ -1,0 +1,14 @@
+* preguntas 
+** 
+* documentar 
+** instalaciones y configuraciones iniciales (no requerido ahora)
+** INSATALAR
+*** emacs
+*** spacemacs
+*** ledger
+** moverse con el teclado
+*** nombres de las teclas
+*** atajos
+*** buenas practicas
+* ejemplos
+* FAQs
