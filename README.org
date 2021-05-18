@@ -1,5 +1,5 @@
 #+TITLE:      Ledger en Emacs para finanzas
-#+AUTHOR:     jero98772
+#+AUTHOR:     jero98772 , son0p
 #+EMAIL:      
 #+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
@@ -13,8 +13,18 @@
 #+STYLE: <link rel="stylesheet" type="text/css" href="slides.css" />
 
 * Ledger en Emacs para finanzas
+** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
+*** Emacs es un editor de texto , muy completo y muy personalizable. 
+** ¿Para qué ?
+*** Emacs esta hecha para optimisar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo minimo el mouse y manipular el editor mediente atajos de teclado.
+*** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de nesesidades , cosas como finanzas , programar , documentar  escribir ... etc ...
+*** es para introducir los datos
+** ¿Qué es Ledger?
+*** un sistema de contabilidad de doble entrada , con caracteristicas minimalisatas ,muy manipulable , maneja varias divisas y es una herramienta para operar fechas  
+** ¿Para que?
+*** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
+*** es buena opcion en cosas como: un registro con un miles de datos que para leerlos y operarlos se nesesitan años , ledger lo lee y hace los calculos nesarios en segundos . 
 ** Ledger-mode
-
 *** Anatomía de una transacción
 **** Fecha, beneficiarios, cuentas, monedas, cantidades    
 **** Metadatos y comentarios
@@ -22,12 +32,8 @@
 **** Verificar (reporte)
 *** Editar y moverse con el teclado
 
-** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
-*** Emacs es un editor de texto , muy completo y muy personalizable. 
-** ¿ para qué ?
-*** Emacs esta hecha para optimisar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo minimo el mouse y manipular el editor mediente atajos de teclado.
-*** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de nesesidades , cosas como finanzas , programar , documentar  escribir ... etc ...
-** ¿qué es Ledger?
-*** Índice
-**** ¿cómo instalar emacs?
-**** moverse con el teclado
+** introduccion a Ledger-Mode
+*** para activarlo de modo manual use:
+**** M-x ledger-mode
+**** alt-x ledger-mode
+*** los archivos de ledger son los que terminan en .ledger

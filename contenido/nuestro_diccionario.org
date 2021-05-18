@@ -2,5 +2,11 @@
 *** traduccion y siginificado de algunas palabras de humano a usuario de emacs y ledger
 ** traducciones
 *** de usuario de emacs y legder a humano 
-*** log -> reporte con varios datos 
+*** log -> reporte 
+*** payee -> beneficiario
+*** account -> cuentas
 ** significados
+*** log - reporte 
+**** archivo con datos de diefrenetes cosas, Ejemplo
+**** 
+*** payee - Beneficiario
