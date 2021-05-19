@@ -37,3 +37,9 @@
 **** M-x ledger-mode
 **** alt-x ledger-mode
 *** los archivos de ledger son los que terminan en .ledger
+** referencias d e ledger-mode
+*** videos
+**** https://www.youtube.com/watch?v=GUuWgk3dXd0&list=PLkjnQ3NFTPnY1eNyLDGi547gkVui1vyn2&index=2 , de emacsconf
+**** https://www.youtube.com/watch?v=cjoCNRpLanY
+**** https://www.youtube.com/watch?v=FJtaM43PgXQ
+**** https://www.youtube.com/watch?v=0aFeonG4wWk
