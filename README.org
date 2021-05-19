@@ -44,13 +44,14 @@
     #+END_SRC
 **** Fecha, beneficiarios, cuentas, monedas, cantidades    
 **** Metadatos y comentarios
-     Se usará el punto y coma ``` ; ``` para los comentarios y metadata
+     Se usará el punto y coma ~ ; ~ para los comentarios y metadata
      
-     Se usará la forma la forma ``` ; categoria: valor ``` para asignar diferentes valores a una misma categoria, ejemplo: el metadato ``` ; to: elvis ``` le asignara el valor ```elvis``` a la categoría ``` to: ```
+     Se usará la forma la forma ~ ; categoria: valor ~ para asignar diferentes valores a una misma categoria, ejemplo: el metadato ~ ; to: elvis ~ le asignara el valor ~ elvis ~ a la categoría ~ to: ~
      
 **** Balance en cada transacción
 **** Verificar (reporte)
 *** Moverse y editar con el teclado
+#+BEGIN_SRC 
     M-p (previous) va a la transacción anterior
     M-n (next) va a la transacción siguiente
     M-f (forward) va a la siguiente palabra
@@ -62,8 +63,8 @@
     M-d (delete) borra la palabra a la derecha
     C-k (kill) borra desde la posición hasta el final de la línea
     C-/ undo
+#+END_SRC    
     
-
 
 ** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
 *** Emacs es un editor de texto , muy completo y muy personalizable. 
@@ -73,20 +74,17 @@
 *** es para introducir los datos
 ** ¿Qué es Ledger?
 *** un sistema de contabilidad de doble entrada , con caracteristicas minimalisatas ,muy manipulable , maneja varias divisas y es una herramienta para operar fechas  
-** ¿Para que?
+** ¿Para qué?
 *** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
 *** es buena opcion en cosas como: un registro con un miles de datos que para leerlos y operarlos se nesesitan años , ledger lo lee y hace los calculos nesarios en segundos . 
-<<<<<<< HEAD
 
-=======
->>>>>>> fa3bc08d9ec3fcd1b7dc456d6af25c68182d7620
 
-** introduccion a Ledger-Mode
+** Introduccion a Ledger-Mode
 *** para activarlo de modo manual use:
 **** M-x ledger-mode
 **** alt-x ledger-mode
 *** los archivos de ledger son los que terminan en .ledger
-** referencias d e ledger-mode
+** Referencias d e ledger-mode
 *** videos
 **** https://www.youtube.com/watch?v=GUuWgk3dXd0&list=PLkjnQ3NFTPnY1eNyLDGi547gkVui1vyn2&index=2 , de emacsconf
 **** https://www.youtube.com/watch?v=cjoCNRpLanY
