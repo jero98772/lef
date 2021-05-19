@@ -12,7 +12,41 @@
 #+CONSTANTS: pi=3.14159265358979323846
 #+STYLE: <link rel="stylesheet" type="text/css" href="slides.css" />
 
-* Ledger en Emacs para finanzas
+** Ledger-mode
+*** Anatomía de una transacción
+    #+BEGIN_SRC ledger
+         2021/04/05 Paga factura A25  Ochoa  
+           banco:0609                                      $ 402,189
+           ingreso:comprobante:20                          $ 402,189 
+           ; compIngreso: No. 20
+           ;
+           ; EMPRESA: A38 S.A.S.   NIT: 10142101 
+           ; CIUDAD: Medellin
+           ; 
+           ; ctaOrigen: 
+           ; ctaDestino: 31100000696
+           ;
+           ; PAGADOR: Electrostatica Ochoa 
+           ; NIT: 101301711
+           ;
+           ; EN LETRAS: Cuatroscientos dos mil ciento
+           ;            ochenta y nueve pesos m/l
+           ;
+           ;
+           ; RETEFUENTE: $103,096 (3.5%)
+           ;
+           ;
+           ingreso:arriendo:bodega:A25     $ 402,189
+           cxc:arriendo:bodega:A25         $-402,189
+           ; fact: A25
+           ; bod: 113
+
+    #+END_SRC
+**** Fecha, beneficiarios, cuentas, monedas, cantidades    
+**** Metadatos y comentarios
+**** Balance en cada transacción
+**** Verificar (reporte)
+*** Editar y moverse con el teclado
 ** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
 *** Emacs es un editor de texto , muy completo y muy personalizable. 
 ** ¿Para qué ?
@@ -24,13 +58,7 @@
 ** ¿Para que?
 *** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
 *** es buena opcion en cosas como: un registro con un miles de datos que para leerlos y operarlos se nesesitan años , ledger lo lee y hace los calculos nesarios en segundos . 
-** Ledger-mode
-*** Anatomía de una transacción
-**** Fecha, beneficiarios, cuentas, monedas, cantidades    
-**** Metadatos y comentarios
-**** Balance en cada transacción
-**** Verificar (reporte)
-*** Editar y moverse con el teclado
+
 
 ** introduccion a Ledger-Mode
 *** para activarlo de modo manual use:
