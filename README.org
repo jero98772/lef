@@ -12,7 +12,59 @@
 #+CONSTANTS: pi=3.14159265358979323846
 #+STYLE: <link rel="stylesheet" type="text/css" href="slides.css" />
 
-* Ledger en Emacs para finanzas
+** Ledger-mode
+*** Anatomía de una transacción
+**** Fecha, beneficiarios, cuentas, monedas, cantidades
+     Se encontrará registros de este tipo:
+     ```
+     2021/04/05 Paga factura A25  Ochoa leon 
+       ingreso:arriendo:bodega:A25                     $ 402,189
+       cxc:arriendo:bodega:A25         $-402,189
+       ; fact: A25
+       ; bod: 113
+       ingreso:comprobante:20                          $-402,189 
+       ; compIngreso: No. 20
+       ;
+       ; EMPRESA: A3 S.A.S.   NIT: 10142101 
+       ; CIUDAD: Medellin
+       ; 
+       ; ctaOrigen: 
+       ; ctaDestino: 31100000696
+       ;
+       ; PAGADOR: Electrostatica Ochoa 
+       ; NIT: 90130991
+       ;
+       ; EN LETRAS: Cuatroscientos dos mil ciento
+       ;            ochenta y nueve pesos m/l
+       ;
+       ;
+       ; RETEFUENTE: (3.5%)
+       ;
+       ;
+       banco:0609                                     $ 402,189
+
+     ```
+**** Metadatos y comentarios
+     Se usará el punto y coma ``` ; ``` para los comentarios y metadata
+     
+     Se usará la forma la forma ``` ; categoria: valor ``` para asignar diferentes valores a una misma categoria, ejemplo: el metadato ``` ; to: elvis ``` le asignara el valor ```elvis``` a la categoría ``` to: ```
+     
+**** Balance en cada transacción
+**** Verificar (reporte)
+*** Moverse y editar con el teclado
+    M-p (previous) va a la transacción anterior
+    M-n (next) va a la transacción siguiente
+    M-f (forward) va a la siguiente palabra
+    M-b (back) va a la palabra anterior
+    C-f (forward) va al caracter siguiente
+    C-b (back) va al caracter anterior
+    C-a salta al inicio de la línea
+    C-e (end) salta al final de la línea
+    M-d (delete) borra la palabra a la derecha
+    C-k (kill) borra desde la posición hasta el final de la línea
+    C-/ undo
+    
+
 ** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
 *** Emacs es un editor de texto , muy completo y muy personalizable. 
 ** ¿Para qué ?
@@ -24,13 +76,6 @@
 ** ¿Para que?
 *** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
 *** es buena opcion en cosas como: un registro con un miles de datos que para leerlos y operarlos se nesesitan años , ledger lo lee y hace los calculos nesarios en segundos . 
-** Ledger-mode
-*** Anatomía de una transacción
-**** Fecha, beneficiarios, cuentas, monedas, cantidades    
-**** Metadatos y comentarios
-**** Balance en cada transacción
-**** Verificar (reporte)
-*** Editar y moverse con el teclado
 
 ** introduccion a Ledger-Mode
 *** para activarlo de modo manual use:
