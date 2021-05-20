@@ -45,16 +45,22 @@
 **** Conceptos :Fecha, beneficiarios, cuentas, monedas, cantidades
 ***** Fecha
       Ledger usa la forma AAAA-MM-DD, por convención usaremos las fechas separadas por barra AAAA/MM/DD
-****** Ledger mode permite programar cronologicamente transacciones , permite programar las siguientes transacciones en fechas específicas y unidades de fecha como  dias ,semanas ,meses...
-****** Para programarlo en fechas use [año,mes,dia] , Ejemplo: programar los dias 1 y 15 del mes 
+      Ledger mode permite programar cronologicamente transacciones , permite programar las siguientes transacciones en fechas específicas y unidades de fecha como  dias ,semanas ,meses...
+      Para programarlo en fechas use [año,mes,dia] , Ejemplo: programar los dias 1 y 15 del mes ocurre una transaccion 
   #+BEGIN_SRC ledger
   [*/*/1,15] Transaccion
   #+END_SRC
-****** Para programarlo en unidades de fecha
+      Para programarlo en unidades de fecha se nesesita una fecha inicial con este formato AAAA/MM/DD,
+      Ejemplo: cada 2 viernes hay una transaccion desde el 2021/4/10 , se representa:
+#+BEGIN_SRC ledger
+  [2021/04/10+Fr] Transaccion
+#+END_SRC
 ***** Cuentas (categorías)
       La cuenta =ingreso:arriendo:bodega= será entendida como una cuenta ingreso que tiene una sub-cuenta llamada arriendo que a su vez tiene una sub-cuenta bodega.
 ***** Monedas
-      Podemos usar diferentes especies:  $, EUR, COP, h, m, s. por convención usaremos el separador =,= para miles y =.= para centavos
+      Podemos usar diferentes especies:  $, EUR, COP, h, m, s. por convención usaremos el separador =,= para miles y =.= para centavos 
+***** beneficiarios (payee)
+***** cantidades
 **** Metadatos y comentarios
      Se usará el punto y coma =;= para los comentarios y metadata
      
@@ -63,8 +69,6 @@
 **** Balance en cada transacción
 **** Verificar (reporte)
      Para verificar que el registro cumpla los requerimientos de Ledger podemos invocar el reporte balance (bal) usando =C-c-o-r= 
-** Conceptos 
-
 *** Moverse y editar con el teclado
 #+BEGIN_SRC 
     M-p (previous) va a la transacción anterior
@@ -88,7 +92,7 @@
 *** Emacs esta hecho para optimizar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo mínimo el mouse y manipular el editor mediente atajos de teclado.
 *** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de necesidades , cosas como finanzas , programar , documentar,  escribir ... etc ...
 *** Es para introducir los datos
-** ¿Qué es [[[https://www.ledger-cli.org/][Ledger]]]?
+** ¿Qué es [[https://www.ledger-cli.org/][Ledger]]?
 *** Un sistema de contabilidad de doble entrada , con características minimalistas, muy manipulable, maneja varias divisas y es una herramienta para operar fechas  
 ** ¿Para qué?
 *** Es una herramienta para manejar datos, necesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan fáciles de ver , evitando hacer calculos repetitivos que quitan tiempo.
