@@ -42,22 +42,29 @@
            ; bod: 113
 
     #+END_SRC
-**** Conceptos :Fecha, beneficiarios, cuentas, monedas, cantidades    
+**** Conceptos :Fecha, beneficiarios, cuentas, monedas, cantidades
+***** Fecha
+      Ledger usa la forma AAAA-MM-DD, por convención usaremos las fechas separadas por barra AAAA/MM/DD
+****** Ledger mode permite programar cronologicamente transacciones , permite programar las siguientes transacciones en fechas específicas y unidades de fecha como  dias ,semanas ,meses...
+****** Para programarlo en fechas use [año,mes,dia] , Ejemplo: programar los dias 1 y 15 del mes 
+  #+BEGIN_SRC ledger
+  [*/*/1,15] Transaccion
+  #+END_SRC
+****** Para programarlo en unidades de fecha
+***** Cuentas (categorías)
+      La cuenta =ingreso:arriendo:bodega= será entendida como una cuenta ingreso que tiene una sub-cuenta llamada arriendo que a su vez tiene una sub-cuenta bodega.
+***** Monedas
+      Podemos usar diferentes especies:  $, EUR, COP, h, m, s. por convención usaremos el separador =,= para miles y =.= para centavos
 **** Metadatos y comentarios
-     Se usará el punto y coma ~ ; ~ para los comentarios y metadata
+     Se usará el punto y coma =;= para los comentarios y metadata
      
-     Se usará la forma la forma ~ ; categoria: valor ~ para asignar diferentes valores a una misma categoria, ejemplo: el metadato ~ ; to: elvis ~ le asignara el valor ~ elvis ~ a la categoría ~ to: ~
+     Se usará la forma =; categoria: valor= para asignar diferentes valores a una misma categoria, ejemplo: el metadato =; to: elvis= le asignara el valor =elvis= a la categoría =to:=
      
 **** Balance en cada transacción
 **** Verificar (reporte)
+     Para verificar que el registro cumpla los requerimientos de Ledger podemos invocar el reporte balance (bal) usando =C-c-o-r= 
 ** Conceptos 
-*** Fecha
-**** Ledger mode permite programar cronologicamente transacciones , permite progrmar las siguientes transacciones en fechas especificas y unidades de fecha como  dias ,semanas ,meses...
-**** para programarlo en fechas use [año,mes,dia] , Ejemplo: programar los dias 1 y 15 del mes 
-#+BEGIN_SRC ledger
-[*/*/1,15] Transaccion
-#+END_SRC
-**** para programarlo en unidades de fecha 
+
 *** Moverse y editar con el teclado
 #+BEGIN_SRC 
     M-p (previous) va a la transacción anterior
@@ -71,32 +78,33 @@
     M-d (delete) borra la palabra a la derecha
     C-k (kill) borra desde la posición hasta el final de la línea
     C-/ undo
+    C-c-o-r (reporte)
 #+END_SRC    
     
 
 ** ¿Qué es [[https://www.gnu.org/software/emacs/][Emacs]]?
 *** Emacs es un editor de texto , muy completo y muy personalizable. 
 ** ¿Para qué ?
-*** Emacs esta hecha para optimisar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo minimo el mouse y manipular el editor mediente atajos de teclado.
-*** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de nesesidades , cosas como finanzas , programar , documentar  escribir ... etc ...
-*** es para introducir los datos
+*** Emacs esta hecho para optimizar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo mínimo el mouse y manipular el editor mediente atajos de teclado.
+*** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de necesidades , cosas como finanzas , programar , documentar,  escribir ... etc ...
+*** Es para introducir los datos
 ** ¿Qué es [[[https://www.ledger-cli.org/][Ledger]]]?
-*** un sistema de contabilidad de doble entrada , con caracteristicas minimalisatas ,muy manipulable , maneja varias divisas y es una herramienta para operar fechas  
+*** Un sistema de contabilidad de doble entrada , con características minimalistas, muy manipulable, maneja varias divisas y es una herramienta para operar fechas  
 ** ¿Para qué?
-*** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
-*** es buena opcion en cosas como: un registro con un miles de datos que para leerlos y operarlos se nesesitan años , ledger lo lee y hace los calculos nesarios en segundos . 
+*** Es una herramienta para manejar datos, necesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan fáciles de ver , evitando hacer calculos repetitivos que quitan tiempo.
+*** Es buena opción en cosas como: un registro con miles de datos que para leerlos y operarlos se nesesitan años, ledger lo lee y hace los cálculos necesarios en segundos . 
 
 
 ** Introduccion a Ledger-Mode
-*** para activarlo de modo manual use:
+*** Para activarlo de modo manual use:
 **** M-x ledger-mode
 **** alt-x ledger-mode
-*** los archivos de ledger son los que terminan en .ledger
-** Referencias d e ledger-mode
-*** videos
+*** Los archivos de ledger acostumbran terminar en .ledger o .ldg
+** Referencias a ledger-mode
+*** Videos
 **** https://www.youtube.com/watch?v=g0TcEedJ-js , de emacsconf
 **** https://www.youtube.com/watch?v=cjoCNRpLanY
 **** https://www.youtube.com/watch?v=FJtaM43PgXQ
 **** https://www.youtube.com/watch?v=0aFeonG4wWk
-*** enlaces de foros
+*** Enlaces de foros
 **** https://groups.google.com/g/ledger-cli/c/MZwjYEp2rjU
