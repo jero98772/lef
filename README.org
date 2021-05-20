@@ -1,5 +1,5 @@
 #+TITLE:      Ledger en Emacs para finanzas
-#+AUTHOR:     jero98772 , son0p
+#+AUTHOR:     son0p,jero98772
 #+EMAIL:      
 #+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
@@ -42,7 +42,7 @@
            ; bod: 113
 
     #+END_SRC
-**** Fecha, beneficiarios, cuentas, monedas, cantidades    
+**** Conceptos :Fecha, beneficiarios, cuentas, monedas, cantidades    
 **** Metadatos y comentarios
      Se usará el punto y coma ~ ; ~ para los comentarios y metadata
      
@@ -50,6 +50,14 @@
      
 **** Balance en cada transacción
 **** Verificar (reporte)
+** Conceptos 
+*** Fecha
+**** Ledger mode permite programar cronologicamente transacciones , permite progrmar las siguientes transacciones en fechas especificas y unidades de fecha como  dias ,semanas ,meses...
+**** para programarlo en fechas use [año,mes,dia] , Ejemplo: programar los dias 1 y 15 del mes 
+#+BEGIN_SRC ledger
+[*/*/1,15] Transaccion
+#+END_SRC
+**** para programarlo en unidades de fecha 
 *** Moverse y editar con el teclado
 #+BEGIN_SRC 
     M-p (previous) va a la transacción anterior
@@ -72,7 +80,7 @@
 *** Emacs esta hecha para optimisar tiempo al momento de escribir , al cambiar de teclado a mouse se pierde mucho tiempo , emacs es una herramienta para usar lo minimo el mouse y manipular el editor mediente atajos de teclado.
 *** Emacs es una herramienta que sirve para todo por su adptabilidad y la facilidad de solucionar de nesesidades , cosas como finanzas , programar , documentar  escribir ... etc ...
 *** es para introducir los datos
-** ¿Qué es Ledger?
+** ¿Qué es [[[https://www.ledger-cli.org/][Ledger]]]?
 *** un sistema de contabilidad de doble entrada , con caracteristicas minimalisatas ,muy manipulable , maneja varias divisas y es una herramienta para operar fechas  
 ** ¿Para qué?
 *** es una herramienta para manejar datos, nesesitamos una herramienta para manejarlos para que nos permita observar cosas que no son tan faciles de ver , evitando hacer calculos repetitivos que quitan tiempo .
@@ -86,7 +94,9 @@
 *** los archivos de ledger son los que terminan en .ledger
 ** Referencias d e ledger-mode
 *** videos
-**** https://www.youtube.com/watch?v=GUuWgk3dXd0&list=PLkjnQ3NFTPnY1eNyLDGi547gkVui1vyn2&index=2 , de emacsconf
+**** https://www.youtube.com/watch?v=g0TcEedJ-js , de emacsconf
 **** https://www.youtube.com/watch?v=cjoCNRpLanY
 **** https://www.youtube.com/watch?v=FJtaM43PgXQ
 **** https://www.youtube.com/watch?v=0aFeonG4wWk
+*** enlaces de foros
+**** https://groups.google.com/g/ledger-cli/c/MZwjYEp2rjU

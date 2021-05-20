@@ -5,6 +5,7 @@
 *** log -> reporte 
 *** payee -> beneficiario
 *** account -> cuentas
+*** wild card -> *
 ** significados
 *** log - reporte 
 **** archivo con datos de diefrenetes cosas, Ejemplo
