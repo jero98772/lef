@@ -42,7 +42,7 @@
            ; bod: 113
 
     #+END_SRC
-**** Conceptos :Fecha, beneficiarios, cuentas, monedas, cantidades
+**** Conceptos: fecha, beneficiarios, cuentas, monedas, cantidades
 ***** Fecha
       Ledger usa la forma AAAA-MM-DD, por convención usaremos las fechas separadas por barra AAAA/MM/DD
       Ledger mode permite programar cronologicamente transacciones , permite programar las siguientes transacciones en fechas específicas y unidades de fecha como  dias ,semanas ,meses...
@@ -56,15 +56,39 @@
   [2021/04/10+Fr] Transaccion
 #+END_SRC
 ***** Cuentas (categorías)
-      La cuenta =ingreso:arriendo:bodega= será entendida como una cuenta ingreso que tiene una sub-cuenta llamada arriendo que a su vez tiene una sub-cuenta bodega.
+      La cuenta =ingreso:arriendo:bodega= será entendida como una cuenta =ingreso= que tiene una sub-cuenta llamada =arriendo= que a su vez tiene una sub-cuenta =bodega=.
 ***** Monedas
-      Podemos usar diferentes especies:  $, EUR, COP, h, m, s. por convención usaremos el separador =,= para miles y =.= para centavos 
+      Podemos usar diferentes especies:  $, EUR, COP, h, m, s. por convención usaremos el separador =coma(,)= para miles y =punto(.)= para centavos 
 ***** beneficiarios (payee)
 ***** cantidades
 **** Metadatos y comentarios
      Se usará el punto y coma =;= para los comentarios y metadata
      
      Se usará la forma =; categoria: valor= para asignar diferentes valores a una misma categoria, ejemplo: el metadato =; to: elvis= le asignara el valor =elvis= a la categoría =to:=
+
+     Para que un metadato afecte todas las categorías de la transacción se escribe en la fila que sigue del payee.
+
+#+BEGIN_SRC
+2021/05/21 Abono facturas
+  ; fact: A1
+  cxc:factura:A1      $-600,000
+  ingreso:factura:A1  $ 600,000
+  banco:09            $ 600,000
+  proveedorABC        $-600,000
+#+END_SRC
+
+   En este caso las cuatro fuentas afectadas quedarán con el metadato =; fact: A1=
+
+   #+BEGIN_SRC
+2021/05/21 Abono facturas
+  cxc:factura:A1      $-600,000
+  ingreso:factura:A1  $ 600,000
+  banco:09            $ 600,000
+  ; fact: A1
+  proveedorABC        $-600,000
+#+END_SRC
+
+   En este caso, solo la cuenta =banco:09= quedará con el metadato =; fact: A1=
      
 **** Balance en cada transacción
 **** Verificar (reporte)
