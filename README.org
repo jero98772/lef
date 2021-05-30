@@ -94,7 +94,9 @@
 **** Verificar (reporte)
      Para verificar que el registro cumpla los requerimientos de Ledger podemos invocar el reporte balance (bal) usando =C-c-o-r= 
 *** Moverse y editar con el teclado
-#+BEGIN_SRC 
+#+BEGIN_SRC
+    C-y pegar
+    M-w copiar
     M-p (previous) va a la transacción anterior
     M-n (next) va a la transacción siguiente
     M-f (forward) va a la siguiente palabra
